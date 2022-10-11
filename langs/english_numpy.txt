@@ -1,0 +1,97 @@
+ndarray,n dimensional array
+ind,index
+int,integer
+ints,integers
+int32,integer 32
+int32s,integers 32
+int64,integer 64
+int64s,integers 64
+float16,float 16
+float16s,floats 16
+csingl,c single
+cdouble,c double
+clongdouble,c long double
+uint,unsigned integer
+uints,unsigned integers
+uint8,unsigned integer 8
+uint8s,unsigned integers 8
+bool,boolean
+bools,booleans
+obj,object
+objs,objects
+str,string
+strs,strings
+flex,flexible
+tups,tuples
+num,number
+nums,numbers
+np,numpy
+col,columb
+cols,columbs
+dtype,data type
+dtypes,data types
+char,character
+chars,characters
+subtype,sub type
+hasobject,has object
+isbuiltin,is built in
+isnative,is native
+align,alignment
+aligns,alignments
+desc,description
+descs,descriptions
+metadata,meta data
+newbyteorder,new byte order
+setstate,set state
+getitem,get item
+out,output
+outs,outputs
+imag,imaginary
+itemsize,item size
+nbytes,number of bytes
+ndim,number of dimensions
+ctypes,c types
+arg,argument
+args,arguments
+max,maximum
+argmax,argument maximum
+min,minimum
+argmin,argument minimum
+argpartition,argument partition
+argsort,argument sort
+astype,as type
+byteswap,byte swap
+conj,conjugate
+prod,product
+cumprod,cumulative product
+cumsum,cumulative sum
+diag,diagonal
+getfield,get field
+itemset,item set
+avg,average
+avgs,averages
+newbyteorder,new byte order
+searchsorted,search sorted
+setfield,set field
+setflags,set flags
+std,standard deviation
+tofile,to file
+swapaxes,swap axes
+tostring,to string
+tolist,to list
+trans,transpose
+var,variable
+keepdims,keep dimensions
+subok,sub ok
+tok,token
+toks,tokens
+subtok,sub token
+subtoks,sub tokens
+arr,array
+arrs,arrays
+inplace,in place
+kwargs,keyword arguments
+kwarg,keyword argument
+cond,condition
+lib,library
+libs,libraries
