@@ -1,3 +1,3 @@
 # abbreviations-generation
-# Author: Matthew Burnard
+Author: Matthew Burnard
 Project for generating abbreviations in multiple languages
