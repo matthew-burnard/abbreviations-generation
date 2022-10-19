@@ -26,7 +26,7 @@ class Tokenizer:
     print(f"Alphabet size: self.alphabet_size")
   
   ## Returns a list of token indexes for each character in the input string, padded to max_len
-  def tokenize(self, string_in, max_len):
+  def tokenize(self, string_in, max_len, pad=True):
     list_out=[]
     list_out.append(self.start_idx)
     for char in string_in:
@@ -40,8 +40,9 @@ class Tokenizer:
           raise CharNotInAlphabetException(f"Character {char} is not in the alphabet")
       list_out.append(char_idx)
     list_out.append(self.end_idx)
-    for i in range(len(list_out), max_len):
-      list_out.append(self.pad_idx)
+    if pad==True:
+      for i in range(len(list_out), max_len):
+        list_out.append(self.pad_idx)
     return list_out
   
   ## Returns a list of the tokens from a token list
