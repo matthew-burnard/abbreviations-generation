@@ -1,0 +1,5 @@
+tok,token
+helloworld,hello world
+seq,sequence
+dim,dimension
+dims,dimensions
