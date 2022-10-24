@@ -22,8 +22,8 @@ class Tokenizer:
     self.alphabet.insert(space_idx, self.space_tok)
     self.alphabet_size=len(self.alphabet)
     
-    print(f"Alphabet: self.alphabet")
-    print(f"Alphabet size: self.alphabet_size")
+    print(f"Alphabet: {self.alphabet}")
+    print(f"Alphabet size: {self.alphabet_size}")
   
   ## Returns a list of token indexes for each character in the input string, padded to max_len
   def tokenize(self, string_in, max_len, pad=True):
