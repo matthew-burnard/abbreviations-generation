@@ -25,6 +25,7 @@ data:
             character_coverage: 1.0
             model_type: "unigram"
             pretokenizer: "none"
+    
     tgr:
         lang: "tgt"
         max_length: 100
@@ -43,6 +44,7 @@ data:
             character_coverage: 1.0
             model_type: "unigram"
             pretokenizer: "none"
+    
     testing:
         n_best: 1
         beam_size: 5
@@ -84,7 +86,7 @@ data:
         validation_freq: 5
         logging_freq: 5
         early_stopping_metric: "loss"
-        model_dir: "poc"
+        model_dir: "models"
         overwrite: False
         shuffle: True
         use_cuda: False
