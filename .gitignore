@@ -4,3 +4,4 @@ test*.py
 *.src
 *.tgt
 data/*
+example/vocab.txt
