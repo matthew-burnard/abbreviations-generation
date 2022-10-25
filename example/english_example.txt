@@ -1,0 +1,10 @@
+tok,token
+seq,sequence
+dim,dimension
+dims,dimensions
+clongdouble,c long double
+char,character
+isbuiltin,is built in
+chars,characters
+desc,description
+descs,descriptions
