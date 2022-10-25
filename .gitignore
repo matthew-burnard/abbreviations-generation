@@ -5,3 +5,4 @@ test*.py
 *.tgt
 data/*
 example/vocab.txt
+models/*
