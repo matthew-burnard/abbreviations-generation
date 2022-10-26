@@ -1,4 +1,5 @@
 from random import shuffle
+from joeynmt.vocabulary import Vocabulary
 
 def make_data_splits(filepath_list, lang_list, ratio=0.8, space_tok='[SPACE]'):
   train_src_file=open("data/train.src", 'w')
@@ -27,6 +28,7 @@ def make_data_splits(filepath_list, lang_list, ratio=0.8, space_tok='[SPACE]'):
       for line in lines:
         tgt,src=line.lower().split(',')
         toks=[]
+        toks.append(lang_tok)
         for char in src[:-1]:
           if char==' ':
             toks.append(space_tok)
@@ -34,6 +36,7 @@ def make_data_splits(filepath_list, lang_list, ratio=0.8, space_tok='[SPACE]'):
             toks.append(char)
         src_file.write(" ".join(toks) + '\n')
         toks=[]
+        toks.append(lang_tok)
         for char in tgt:
           if char==' ':
             toks.append(space_tok)
