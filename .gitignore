@@ -7,3 +7,4 @@ data/*
 example/vocab.txt
 models/*
 joeynmt/*
+jnmt/*
