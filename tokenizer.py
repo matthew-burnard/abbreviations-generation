@@ -1,11 +1,11 @@
 import alphabets
 
 class Tokenizer:
-  def __init__(self, lang='en',
+  def __init__(self, alphabet='latin',
       pad_idx=0, pad_tok='[PAD]', start_idx=1, start_tok='[SOS]', end_idx=2, end_tok='[EOS]', space_idx=3, space_tok='[SPACE]', lang_idx=4):
     #set alphabet used by language
     if alphabet=='latin':
-      self.alphabet = alphabets.LATIN_SIMPLE_ALPHABET
+      self.alphabet = alphabets.LATIN_EXTENDED_ALPHABET
       lang_tok='[ENG]'
     else:
       raise LanguageNotImplementedException(f"Language not implemented: {lang}")
@@ -53,11 +53,13 @@ class Tokenizer:
     return list_out
   
   ## Returns a list of the tokens from a token list
-  def str_of_tok_list(self, list_in):
+  def str_of_tok_list(self, list_in, ignore_pad=False):
     list_out = []
     for tok in list_in:
+      if ignore_pad and tok==self.pad_idx:
+        break
       list_out.append(self.alphabet[tok])
-    return list_out
+    return " ".join(list_out)
   
   ## Returns the string representation of a token list
   def detokenize(self, list_in):
