@@ -9,7 +9,12 @@ Create a python virtual environment and install the requirements
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-Make a models directory
+Make data
+```
+mkdir data
+python builddata.py
+```
+Make models directory
 ```
 mkdir models
 ```
