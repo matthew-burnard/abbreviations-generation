@@ -12,10 +12,10 @@ def build_and_save_vocab():
 
 #Make dataset files
 def make_test_datasets():
-  filepath_list = ["example/english_example.txt"]
-  langs_list=["ENG_EX"]
+  filepath_list = ["langs/english_numpy.txt"]
+  langs_list=["ENG"] #Add the language tag to the front
   vocab = Vocabulary(['[SPACE]'] + LATIN_EXTENDED_ALPHABET)
-  utils.make_data_splits(filepath_list, langs_list)
+  utils.make_data_splits(filepath_list, langs_list, verbose=True)
 
 if __name__=="__main__":
   build_and_save_vocab()
