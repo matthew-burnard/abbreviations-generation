@@ -1,5 +1,4 @@
-ndarray,n dimensional array
-ind,index
+idx,index
 int,integer
 ints,integers
 int32,integer 32
