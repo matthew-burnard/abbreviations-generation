@@ -12,7 +12,7 @@ data:
         level: "word"
         voc_limit: 400
         voc_min_freq: 1
-        voc_file: "example/vocab.txt"
+        voc_file: "data/vocab.txt"
     
     trg:
         lang: "tgt"
@@ -21,26 +21,26 @@ data:
         level: "word"
         voc_limit: 400
         voc_min_freq: 1
-        voc_file: "example/vocab.txt"
+        voc_file: "data/vocab.txt"
     
 testing:
     n_best: 1
-    beam_size: 1
+    beam_size: 5
     beam_alpha: 1.0
-    batch_size: 2
+    batch_size: 10
     batch_type: "sentence"
     eval_metrics: ["token_accuracy"]
     max_output_length: 100
     return_prob: "none"
 
 training:
-    random_seed: 42
+    #random_seed: 42
     optimizer: "adam"
-    learning_rate: 0.005
+    learning_rate: 0.01
     learning_rate_min: 0.0001
     clip_grad_norm: 1.0
     weight_decay: 0.
-    batch_size: 5
+    batch_size: 50
     batch_type: "sentence"
     normalization: "batch"
     scheduling: "plateau"
@@ -49,8 +49,8 @@ training:
     epochs: 1000
     validation_freq: 50
     logging_freq: 50
-    early_stopping_metric: "loss"
-    model_dir: "models"
+    early_stopping_metric: "acc"
+    model_dir: "copy-model"
     overwrite: True #Only set True when debugging
     shuffle: True
     use_cuda: False

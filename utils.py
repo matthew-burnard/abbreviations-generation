@@ -3,7 +3,7 @@ from joeynmt.vocabulary import Vocabulary
 from tqdm import tqdm
 import re
 
-def make_data_splits(filepath_list, lang_list, ratio=0.8, space_tok='[SPACE]', include_lang_tok=False, verbose=False):
+def make_data_splits(filepath_list, lang_list, ratio=0.8, space_tok='[SPACE]', include_lang_tok=True, verbose=False):
   if verbose:
     print("Making data splits")
   train_src_file=open("data/train.src", 'w')
@@ -12,7 +12,6 @@ def make_data_splits(filepath_list, lang_list, ratio=0.8, space_tok='[SPACE]', i
   dev_tgt_file=open("data/dev.tgt", 'w')
   test_src_file=open("data/test.src", 'w')
   test_tgt_file=open("data/test.tgt", 'w')
-  
   lang_line_list=[]
   total=0
   for filepath,lang in zip(filepath_list,lang_list):
@@ -49,8 +48,6 @@ def make_data_splits(filepath_list, lang_list, ratio=0.8, space_tok='[SPACE]', i
             toks.append(char)
         src_file.write(" ".join(toks) + '\n')
         toks=[]
-        if include_lang_tok:
-          toks.append(lang_tok)
         for char in tgt:
           if char==' ':
             toks.append(space_tok)

@@ -13,4 +13,4 @@ LATIN_EXTENDED_ALPHABET = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'
 
 TASK_TOKS = [ "[COPY]", "[ABBREV]" ]
 
-LANG_TOKS = ["[EN]"]
+LANG_TOKS = ["[COPY]", "[EN]"]
