@@ -8,5 +8,5 @@ example/vocab.txt
 models/*
 joeynmt/*
 jnmt/*
-copy_data/*
-copy_model/*
+copy-data/*
+copy-model/*
