@@ -2,7 +2,7 @@ import alphabets
 from tqdm import tqdm
 import random
 
-def gen_random_copy_pair(alphabet, min_len=1, max_len=10):
+def gen_random_copy_pair(alphabet, min_len=5, max_len=20):
   length = random.randrange(min_len,max_len)
   string = "".join(random.choice(alphabet) for _ in range(length))
   return f"{string},{string}"
