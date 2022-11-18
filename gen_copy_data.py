@@ -25,4 +25,4 @@ def build_copy_data(alphabet, num_lines=10000, out_path="./copy-data/data.COPY",
 
 if __name__=="__main__":
   alphabet = alphabets.LATIN_SIMPLE_ALPHABET
-  build_copy_data(alphabet, num_lines=1000, verbose=True)
+  build_copy_data(alphabet, num_lines=5000, verbose=True)

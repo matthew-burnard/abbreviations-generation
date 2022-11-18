@@ -40,22 +40,22 @@ training:
     learning_rate_min: 0.0001
     clip_grad_norm: 1.0
     weight_decay: 0.
-    batch_size: 50
+    batch_size: 100
     batch_type: "sentence"
     normalization: "batch"
     scheduling: "plateau"
-    patience: 5
+    patience: 10
     decrease_factor: 0.5
     epochs: 1000
-    validation_freq: 50
-    logging_freq: 50
+    validation_freq: 100
+    logging_freq: 100
     early_stopping_metric: "acc"
     model_dir: "copy-model"
     overwrite: True #Only set True when debugging
     shuffle: True
     use_cuda: False
-    print_valid_sents: [0, 1, 2]
-    keep_best_chpts: 3
+    print_valid_sents: [0, 3, 6]
+    keep_best_chpts: 1
     fp16: True
 
 model:
@@ -74,27 +74,27 @@ model:
         type: "recurrent"
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 16
+            embedding_dim: 128
             scale: False
             freeze: False
             #load_pretrained: No pretrained embeddings exist
-        hidden_size: 30
+        hidden_size: 64
         bidirectional: True
         dropout: 0.2
-        num_layers: 3
+        num_layers: 1
         freeze: False
     decoder:
         type: "recurrent"
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 16
+            embedding_dim: 128
             scale: False
             freeze: False
             #load_pretrained: No pretrained embeddings exist
-        hidden_size: 30
+        hidden_size: 128
         dropout: 0.2
         hidden_dropout: 0.2
-        num_layers: 2
+        num_layers: 1
         input_feeding: True
         init_hidden: "last"
         attention: "bahdanau"
