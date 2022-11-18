@@ -74,7 +74,7 @@ model:
         type: "recurrent"
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 128
+            embedding_dim: 64
             scale: False
             freeze: False
             #load_pretrained: No pretrained embeddings exist
@@ -87,11 +87,11 @@ model:
         type: "recurrent"
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 128
+            embedding_dim: 64
             scale: False
             freeze: False
             #load_pretrained: No pretrained embeddings exist
-        hidden_size: 128
+        hidden_size: 64
         dropout: 0.2
         hidden_dropout: 0.2
         num_layers: 1
