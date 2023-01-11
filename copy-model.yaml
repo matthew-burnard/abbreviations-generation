@@ -81,7 +81,7 @@ model:
         hidden_size: 30
         bidirectional: True
         dropout: 0.2
-        num_layers: 3
+        num_layers: 2
         freeze: False
     decoder:
         type: "recurrent"
@@ -94,7 +94,7 @@ model:
         hidden_size: 30
         dropout: 0.2
         hidden_dropout: 0.2
-        num_layers: 2
+        num_layers: 1
         input_feeding: True
         init_hidden: "last"
         attention: "bahdanau"

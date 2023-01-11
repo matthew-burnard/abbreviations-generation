@@ -12,7 +12,7 @@ data:
         level: "word"
         voc_limit: 400
         voc_min_freq: 1
-        voc_file: "example/vocab.txt"
+        voc_file: "data/vocab.txt"
     
     trg:
         lang: "tgt"
@@ -21,7 +21,7 @@ data:
         level: "word"
         voc_limit: 400
         voc_min_freq: 1
-        voc_file: "example/vocab.txt"
+        voc_file: "data/vocab.txt"
     
 testing:
     n_best: 1
@@ -34,7 +34,12 @@ testing:
     return_prob: "none"
 
 training:
-    random_seed: 42
+    load_model: "copy-model/best.ckpt"
+    reset_best_ckpt: True
+    reset_scheduler: True
+    reset_optimizer: True
+    reset_iter_state: True
+    #random_seed: 42
     optimizer: "adam"
     learning_rate: 0.005
     learning_rate_min: 0.0001
@@ -47,9 +52,9 @@ training:
     patience: 5
     decrease_factor: 0.5
     epochs: 1000
-    validation_freq: 50
+    validation_freq: 200
     logging_freq: 50
-    early_stopping_metric: "loss"
+    early_stopping_metric: "acc"
     model_dir: "models"
     overwrite: True #Only set True when debugging
     shuffle: True
@@ -81,7 +86,7 @@ model:
         hidden_size: 30
         bidirectional: True
         dropout: 0.2
-        num_layers: 3
+        num_layers: 2
         freeze: False
     decoder:
         type: "recurrent"
@@ -94,7 +99,7 @@ model:
         hidden_size: 30
         dropout: 0.2
         hidden_dropout: 0.2
-        num_layers: 2
+        num_layers: 1
         input_feeding: True
         init_hidden: "last"
         attention: "bahdanau"
