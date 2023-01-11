@@ -34,12 +34,8 @@ testing:
     return_prob: "none"
 
 training:
-    load_model: "copy-model/best.ckpt"
-    reset_best_ckpt: True
-    reset_scheduler: True
-    reset_optimizer: True
-    reset_iter_state: True
-    #random_seed: 42
+    load_model: "copy_model/best.ckpt"
+    random_seed: 42
     optimizer: "adam"
     learning_rate: 0.005
     learning_rate_min: 0.0001
@@ -79,24 +75,24 @@ model:
         type: "recurrent"
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 16
+            embedding_dim: 64
             scale: False
             freeze: False
             #load_pretrained: No pretrained embeddings exist
-        hidden_size: 30
+        hidden_size: 64
         bidirectional: True
         dropout: 0.2
-        num_layers: 2
+        num_layers: 1
         freeze: False
     decoder:
         type: "recurrent"
         rnn_type: "lstm"
         embeddings:
-            embedding_dim: 16
+            embedding_dim: 64
             scale: False
             freeze: False
             #load_pretrained: No pretrained embeddings exist
-        hidden_size: 30
+        hidden_size: 64
         dropout: 0.2
         hidden_dropout: 0.2
         num_layers: 1

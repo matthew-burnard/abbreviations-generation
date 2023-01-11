@@ -2,7 +2,7 @@ import alphabets
 from tqdm import tqdm
 import random
 
-def gen_random_copy_pair(alphabet, min_len=1, max_len=10):
+def gen_random_copy_pair(alphabet, min_len=5, max_len=20):
   length = random.randrange(min_len,max_len)
   string = "".join(random.choice(alphabet) for _ in range(length))
   return f"{string},{string}"
@@ -25,4 +25,4 @@ def build_copy_data(alphabet, num_lines=10000, out_path="./copy-data/data.COPY",
 
 if __name__=="__main__":
   alphabet = alphabets.LATIN_SIMPLE_ALPHABET
-  build_copy_data(alphabet, num_lines=1000, verbose=True)
+  build_copy_data(alphabet, num_lines=5000, verbose=True)
